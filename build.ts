@@ -1,4 +1,4 @@
-import fs, { Mode } from "fs";
+import fs from "fs";
 import path from "path";
 
 const buildFilePath = path.join(__dirname, "build", "bundle.js");
