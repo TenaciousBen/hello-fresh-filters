@@ -18,8 +18,7 @@ const selectionSelector = `[data-test-id="selected-section-wrapper"]`;
 const mainSelector = `[data-test-id="courses-list-unchosen"]`;
 const sidesSelector = `[data-test-id="menu-add-ons-list"]`;
 
-export const getMenus = (): Menu[] => {
-    const doc = $(document);
+export const getMenus = (doc: JQuery<Document>): Menu[] => {
     const selectionsElement = findOnlyOne(doc, selectionSelector);
     const mainElement = findOnlyOne(doc, mainSelector);
     const sidesElement = findOnlyOne(doc, sidesSelector);

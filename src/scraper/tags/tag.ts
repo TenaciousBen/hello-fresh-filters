@@ -1,16 +1,13 @@
 import { Course } from "../course";
-import { getIconTags, IconTag } from "./iconTag";
+import { getHighlightedTags } from "./highlightedTag";
+import { getIconTags } from "./iconTag";
+import { getPromotedTags } from "./promotedTag";
 import { getTextTags, TextTag } from "./textTag";
 
 export interface Tag {
     iconSvgHtml: string | null;
     name: string | null;
 }
-
-const mapIconTags = (tag: IconTag): Tag => ({
-    name: tag.name,
-    iconSvgHtml: tag.iconSvgHtml
-});
 
 const mapTextTags = (tag: TextTag): Tag => ({
     name: tag.tag,
@@ -20,8 +17,12 @@ const mapTextTags = (tag: TextTag): Tag => ({
 export const getTags = (course: Course): Tag[] => {
     let tags: Tag[] = [];
     const iconTags = getIconTags(course);
-    tags = tags.concat(iconTags.map(mapIconTags))
+    tags = tags.concat(iconTags)
     const textTags = getTextTags(course);
     tags = tags.concat(textTags.map(mapTextTags));
+    const highlightedTags = getHighlightedTags(course);
+    tags = tags.concat(highlightedTags);
+    const promotedTags = getPromotedTags(course);
+    tags = tags.concat(promotedTags);
     return tags;
 };
