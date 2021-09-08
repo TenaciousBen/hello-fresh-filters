@@ -1,4 +1,6 @@
 import { message } from "./test";
-require("./dependencies/jquery.min.js")
+import $ from "jquery";
 
 console.log(message);
+const ele = $(".language-diff");
+console.log(ele.length);

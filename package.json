@@ -10,9 +10,12 @@
   "author": "Ben Hajduk",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.6.0",
     "typescript": "^4.4.2"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.6",
+    "expose-loader": "^3.0.0",
     "ts-loader": "^9.2.5",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0"
