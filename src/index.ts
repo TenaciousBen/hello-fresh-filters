@@ -1,6 +1,5 @@
-import { message } from "./test";
-import $ from "jquery";
+import { getMenus } from "./view/menu";
 
-console.log(message);
-const ele = $(".language-diff");
-console.log(ele.length);
+const menus = getMenus();
+console.log(menus);
+menus.forEach(c => console.log(c));
