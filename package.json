@@ -1,0 +1,20 @@
+{
+  "name": "hello-fresh-filters",
+  "version": "1.0.0",
+  "description": "A simple javascript applet intended to be invoked as a bookmark on Hello Fresh to add some filtering to their course cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Ben Hajduk",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.5",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
